@@ -1,5 +1,4 @@
-﻿  Source.cpp
-Source.obj : error LNK2019: unresolved external symbol glutInit referenced in function main
+﻿Source.obj : error LNK2019: unresolved external symbol glutInit referenced in function main
 Source.obj : error LNK2019: unresolved external symbol glutInitDisplayMode referenced in function main
 Source.obj : error LNK2019: unresolved external symbol glutInitWindowPosition referenced in function main
 Source.obj : error LNK2019: unresolved external symbol glutInitWindowSize referenced in function main
@@ -9,4 +8,4 @@ Source.obj : error LNK2019: unresolved external symbol glutPostRedisplay referen
 Source.obj : error LNK2019: unresolved external symbol glutDisplayFunc referenced in function main
 Source.obj : error LNK2019: unresolved external symbol glutTimerFunc referenced in function "void __cdecl animation(int)" (?animation@@YAXH@Z)
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\VS\lib\x64\glut32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
-C:\Users\Mena\source\repos\Project1\x64\Debug\Boat2.exe : fatal error LNK1120: 9 unresolved externals
+C:\Users\Mena\Downloads\My-Github\opengl\masterpieceOpenGL\x64\Debug\Boat2.exe : fatal error LNK1120: 9 unresolved externals

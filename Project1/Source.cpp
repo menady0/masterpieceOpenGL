@@ -1,6 +1,5 @@
 #include <glut.h>
 #include<cmath>
-
 #define PI 3.14159
 
 void xyAxis();
@@ -26,6 +25,7 @@ void boat();
 
 GLfloat boatSpeed = -1150;
 GLfloat cloudSpeed = 0;
+GLfloat sunSpeed = 0;
 const GLint ortho = 1000;
 
 void drawRectangle(float x1, float y1, float x2, float y2) {
@@ -67,6 +67,8 @@ void init() {
 }
 void display() {
 	glClear(GL_COLOR_BUFFER_BIT);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
 
 	sky();
 	ground();
@@ -93,12 +95,16 @@ int main(int argc, char** argv) {
 void sky() {
 	glColor3f(0.490f, 0.992f, 0.988f);
 	drawRectangle(-ortho, -300, ortho, ortho);
-	glColor3f(0.9882, 0.9921, 0.0078);
 	sun();
 	clouds();
 }
 void sun() {
+	glColor3f(0.9764, 0.9725, 0.0274);
+	glPushMatrix();
+	glRotatef(sunSpeed, 0, 0, 1);
+	sunSpeed += .1;
 	drawEllipse(800, 800, 100, 90);
+
 	glPushMatrix();
 	glBegin(GL_LINES);
 	glVertex2i(800, 800);
@@ -114,6 +120,7 @@ void sun() {
 		glVertex2i(650, 650);
 		glEnd();
 	}
+	glPopMatrix();
 	glPopMatrix();
 }
 void cloud() {
